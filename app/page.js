@@ -1,5 +1,8 @@
-import Image from "next/image";
+// consider if this will need to be client rendered or not
 
+// import your custom theme hook that connects to your theme context
+
+// set up the theme toggle button using your earlier written toggle logic
 export default function Home() {
   return (
     <main className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-200">
