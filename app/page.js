@@ -1,9 +1,13 @@
+"use client";
 // consider if this will need to be client rendered or not
 
 // import your custom theme hook that connects to your theme context
-
+import { useTheme } from "./contexts/ThemeContext";
 // set up the theme toggle button using your earlier written toggle logic
+import ToggleButton from "./component/toggleButton";
 export default function Home() {
+  const { theme, toggleTheme } = useTheme();
+
   return (
     <main className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-200">
       <header className="px-6 py-16 max-w-4xl mx-auto">
@@ -16,6 +20,7 @@ export default function Home() {
       </header>
 
       <section className="px-6 py-12 bg-gray-50 dark:bg-gray-800">
+        <ToggleButton />
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold mb-8">Features</h2>
           <div className="grid md:grid-cols-3 gap-6">
